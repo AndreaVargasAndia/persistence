@@ -63,10 +63,11 @@ public:
     }
     //std::cout<<"ant"<<forward_[position-1]->get_data(0)<<"\n";
     //std::cout<<"actual"<<v->get_data(0)<<"\n";
-    std::cout<<"actual"<<get_data(0)<<"\n";
+
+    std::cout<<"actualll: "<<get_data(0)<<"\n";
     forward_[position] = v;
-    v->backward_[position]=forward_[position-1];
-    std::cout<<"ant-> "<<v->backward_[position]->get_data(0)<<"\n";
+    backward_[position]=forward_[position-1];
+    //std::cout<<"ant-> "<<v->backward_[position]->get_data(0)<<"\n";
     //backward_[position-1]=v;
     return true;
   }
@@ -138,7 +139,7 @@ public:
       Node* a=get_root_ptr(0);
       std::cout<<"root "<<a->get_data(0)<<"\n";
       std::cout<<"forward "<<a->forward_[0]->get_data(0)<<"-"<<a->forward_[1]->get_data(0)<<"- "<< a->forward_[2]->get_data(0)<<"\n";//<<a->forward_[2]->get_data(0)
-      std::cout<<"backward "<<a->backward_[2]->get_data(0);//<<"-"<<a->backward_[1]->get_data(0)<<"- "<< a->backward_[0]->get_data(0)<<"\n";
+      std::cout<<"backward "<<a->backward_[2]->get_data(0)<<"-"<<a->backward_[1]->get_data(0)<<"- "<< a->backward_[0]->get_data(0)<<"\n";
   }
 
  protected:
